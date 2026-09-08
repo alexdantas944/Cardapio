@@ -27,7 +27,7 @@
 <div class="bottom"><button class="btn primary" id="next" onclick="next()">Continuar</button><button class="btn back" id="back" style="display:none" onclick="back()">Voltar</button><button class="btn whats" id="send" style="display:none" onclick="finish()">📲 Confirmar e enviar no WhatsApp</button></div>
 </aside></div><div class="toast" id="toast"></div>
 <script>
-const CONFIG={SUPABASE_URL:"COLE_AQUI_SUA_SUPABASE_URL",SUPABASE_ANON_KEY:"COLE_AQUI_SUA_SUPABASE_ANON_KEY",TABLE:"produtos",BUCKET:"produtos",ORDERS_TABLE:"pedidos",WHATSAPP:"5585994530854",DELIVERY_FEE:5};
+const CONFIG={SUPABASE_URL:"https://htkqxttctkygzxubjhjy.supabase.co",SUPABASE_ANON_KEY:"sb_publishable_PvIjt7O1XsDIr1rs4fj99w_wcpcSA7L",TABLE:"produtos",BUCKET:"produtos",ORDERS_TABLE:"pedidos",WHATSAPP:"5585994530854",DELIVERY_FEE:5};
 let sb=null,products=[],cart=[],cat="Todos",step=1;
 const $=x=>document.getElementById(x),money=v=>new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"}).format(Number(v)||0);
 const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
