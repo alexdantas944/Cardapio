@@ -1,34 +1,3155 @@
-<!doctype html><html lang="pt-BR"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#571b07"><link rel="manifest" href="manifest.webmanifest?v=5">
-<link rel="icon" href="icons/icon-192.png"><title>Sonho de Pastel</title>
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<meta
+  name="theme-color"
+  content="#571b07">
+
+<meta
+  name="description"
+  content="Cardápio oficial Sonho de Pastel">
+
+<link
+  rel="icon"
+  href="logo.png">
+
+<title>Sonho de Pastel — Cardápio</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#fffaf0;color:#32160c;font-family:system-ui,Arial}.top{background:#571b07;color:#fff;position:sticky;top:0;z-index:5}.topin{max-width:1100px;margin:auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center}.brand img{width:58px;height:58px;border-radius:15px}.brand b{font-size:20px}.brand small{display:block;color:#f5d6c6}.cart{background:#ffbf00;color:#4b1907;border:0;border-radius:28px;padding:12px 17px;font-weight:900}.count{background:#702507;color:#fff;border-radius:50%;padding:5px 10px;margin-left:5px}.hero{background:linear-gradient(135deg,#fff0a9,#fff9e8);padding:35px 16px}.heroin{max-width:1100px;margin:auto;display:flex;gap:22px;align-items:center}.hero img{width:115px;height:115px;object-fit:cover;border-radius:18px}.hero h1{font-size:clamp(32px,6vw,52px);margin:0}.hero p{font-size:20px;color:#6d594d}.search{width:100%;padding:15px 20px;border:1px solid #ddd0c2;border-radius:30px;font-size:18px}.status{max-width:1100px;margin:15px auto;padding:12px;text-align:center;background:#fff1d9;border-radius:12px}.ok{background:#eaf8ef!important;color:#116b35}.err{background:#fff0ef!important;color:#a3241b}.main{max-width:1100px;margin:auto;padding:18px 16px 80px}.cats{display:flex;gap:8px;overflow:auto;padding-bottom:15px}.cat{border:1px solid #eadfd0;background:#fff;border-radius:22px;padding:9px 14px;font-weight:800;white-space:nowrap}.cat.active{background:#571b07;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid #eadfd0;border-radius:18px;overflow:hidden;box-shadow:0 8px 25px #32160c12}.pic{aspect-ratio:1.15;background:#f5e7d4;position:relative}.pic img{width:100%;height:100%;object-fit:cover}.badge{position:absolute;top:9px;left:9px;background:#ffbf00;padding:6px 9px;border-radius:15px;font-size:12px;font-weight:900}.body{padding:13px;display:flex;flex-direction:column;gap:7px}.body h3{margin:0}.body p{margin:0;color:#74685f;min-height:38px}.price{font-size:21px;font-weight:950;color:#571b07}.add,.primary{background:#571b07;color:#fff;border:0;border-radius:11px;padding:12px;font-weight:900}.empty{text-align:center;padding:45px 15px;color:#74685f}.drawer,.modal{position:fixed;inset:0;background:#0007;z-index:20;display:none}.show{display:block}.panel{position:absolute;right:0;top:0;height:100%;width:min(520px,100%);background:#fffaf4;display:flex;flex-direction:column}.head{padding:15px;border-bottom:1px solid #eadfd0;display:flex;justify-content:space-between;align-items:center}.close{border:0;background:#eee5da;border-radius:50%;width:40px;height:40px}.items{overflow:auto;flex:1;padding:14px}.item{background:#fff;border:1px solid #eadfd0;border-radius:13px;padding:11px;margin-bottom:9px;display:flex;justify-content:space-between}.qty{display:flex;gap:7px;align-items:center;margin-top:7px}.qty button{border:0;background:#eadfd0;border-radius:7px;width:30px;height:30px}.foot{padding:15px;border-top:1px solid #eadfd0;background:#fff}.sum{display:flex;justify-content:space-between;margin:6px 0}.total{font-size:22px;font-weight:950}.primary{width:100%;margin-top:10px}.modal{align-items:flex-end;justify-content:center}.box{background:#fffaf4;width:min(680px,100%);max-height:94vh;overflow:auto;border-radius:22px 22px 0 0;padding:17px}.form{display:grid;gap:11px}.field label{font-size:13px;font-weight:800;display:block;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #ddd0c2;border-radius:10px}.field textarea{min-height:75px}.actions{display:flex;gap:9px}.actions button{flex:1;padding:13px;border:0;border-radius:11px;font-weight:900}.next{background:#138a45;color:#fff}.back{background:#eadfd0}.review{background:#fff;border:1px solid #eadfd0;border-radius:13px;padding:12px;line-height:1.55}
-@media(max-width:750px){.grid{grid-template-columns:repeat(2,1fr)}.heroin{gap:14px}.hero img{width:90px;height:90px}.brand b{font-size:17px}.brand small{font-size:11px}}@media(max-width:480px){.grid{gap:9px}.body{padding:10px}.body h3{font-size:16px}.body p{font-size:12px}.price{font-size:18px}.hero h1{font-size:31px}}
-</style></head><body>
-<header class="top"><div class="topin"><div class="brand"><img src="logo.png"><div><b>Sonho de Pastel</b><small>Cardápio oficial • Pedido pelo WhatsApp</small></div></div><button class="cart" onclick="openCart()">🛒 Carrinho <span class="count" id="count">0</span></button></div></header>
-<section class="hero"><div class="heroin"><img src="logo.png"><div><h1>Seu pastel favorito 😊</h1><p>Escolha seus produtos e finalize em poucos passos.</p><input id="search" class="search" placeholder="🔎 Buscar no cardápio..." oninput="render()"></div></div></section>
-<div id="status" class="status">🔄 Conectando ao Supabase...</div><main class="main"><div id="cats" class="cats"></div><div id="grid" class="grid"></div></main>
-<div id="drawer" class="drawer" onclick="if(event.target===this)closeCart()"><div class="panel"><div class="head"><h2>🛒 Carrinho</h2><button class="close" onclick="closeCart()">✕</button></div><div id="items" class="items"></div><div class="foot"><div class="sum"><span>Subtotal</span><b id="sub">R$ 0,00</b></div><div class="sum"><span>Entrega</span><b id="fee">R$ 5,00</b></div><div class="sum total"><span>Total</span><b id="tot">R$ 5,00</b></div><button class="primary" onclick="checkout()">Continuar pedido</button></div></div></div>
-<div id="modal" class="modal"><div class="box"><div class="head" style="padding:0 0 12px"><h2>Finalizar pedido</h2><button class="close" onclick="closeCheckout()">✕</button></div><div id="form"></div></div></div>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
-const CONFIG={SUPABASE_URL:"https://htkqxttctkygzxubjhjy.supabase.co",SUPABASE_ANON_KEY:"sb_publishable_PvIjt7O1XsDIr1rs4fj99w_wcpcSA7L",TABLE:"produtos",BUCKET:"produtos",ORDERS_TABLE:"pedidos",WHATSAPP:"5585994530854",DELIVERY_FEE:5};
-let sb,products=[],cart=[],cat="Todos",step=1;const $=x=>document.getElementById(x),money=n=>Number(n||0).toLocaleString("pt-BR",{style:"currency",currency:"BRL"}),esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
-function stat(t,c=""){ $("status").textContent=t;$("status").className="status "+c}
-function productImg(p){if(p.imagem_url)return p.imagem_url;if(sb&&p.imagem){let r=sb.storage.from(CONFIG.BUCKET).getPublicUrl(p.imagem);if(r.data?.publicUrl)return r.data.publicUrl}return"logo.png"}
-async function load(){try{stat("🔄 Conectando ao Supabase...");if(!window.supabase)throw Error("Biblioteca Supabase não carregou.");sb=window.supabase.createClient(CONFIG.SUPABASE_URL,CONFIG.SUPABASE_ANON_KEY);let r=await sb.from(CONFIG.TABLE).select("*").eq("ativo",true).order("ordem",{ascending:true});if(r.error)throw r.error;products=(r.data||[]).map(p=>({...p,preco:Number(p.preco||0),categoria:p.categoria||"Outros"}));if(!products.length){stat("⚠️ Supabase conectado, mas a tabela produtos está vazia.","err");$("grid").innerHTML='<div class="empty" style="grid-column:1/-1">Nenhum produto cadastrado. Execute o SQL do ZIP.</div>';cats();update();return}stat("🟢 Supabase conectado • "+products.length+" produtos","ok");cats();render();update()}catch(e){console.error(e);stat("❌ Erro no Supabase: "+(e.message||e),"err");$("grid").innerHTML='<div class="empty" style="grid-column:1/-1"><b>Não foi possível carregar o cardápio.</b><br><br>'+esc(e.message||e)+'<br><br><button class="primary" onclick="load()">🔄 Tentar novamente</button></div>'}}
-function cats(){let a=["Todos",...new Set(products.map(p=>p.categoria))];$("cats").innerHTML=a.map(c=>'<button class="cat '+(cat===c?"active":"")+'" onclick="cat='+JSON.stringify(c)+';cats();render()">'+esc(c)+"</button>").join("")}
-function render(){let q=$("search").value.toLowerCase(),a=products.filter(p=>(cat==="Todos"||p.categoria===cat)&&(!q||(p.nome+" "+(p.descricao||"")+" "+p.categoria).toLowerCase().includes(q)));$("grid").innerHTML=a.length?a.map(p=>'<article class="card"><div class="pic"><img src="'+esc(productImg(p))+'" onerror="this.src=\'logo.png\'" loading="lazy">'+(p.destaque?'<span class="badge">⭐ Destaque</span>':"")+'</div><div class="body"><h3>'+esc(p.nome)+'</h3><p>'+esc(p.descricao||"Delicioso e preparado com carinho.")+'</p><div class="price">'+money(p.preco)+'</div><button class="add" onclick="add('+p.id+')">+ Adicionar</button></div></article>').join(""):'<div class="empty" style="grid-column:1/-1">🔎 Nenhum produto encontrado.</div>'}
-function add(id){let p=products.find(x=>x.id==id),i=cart.find(x=>x.id==id);if(i)i.q++;else cart.push({id:p.id,nome:p.nome,preco:p.preco,q:1});update()}
-function change(id,d){let i=cart.find(x=>x.id==id);if(!i)return;i.q+=d;if(i.q<1)cart=cart.filter(x=>x.id!=id);update()}
-function totals(){let s=cart.reduce((a,i)=>a+i.preco*i.q,0);return{s,fee:s?CONFIG.DELIVERY_FEE:0,total:s+(s?CONFIG.DELIVERY_FEE:0)}}
-function update(){let n=cart.reduce((a,i)=>a+i.q,0),t=totals();$("count").textContent=n;$("sub").textContent=money(t.s);$("fee").textContent=money(t.fee);$("tot").textContent=money(t.total);$("items").innerHTML=cart.length?cart.map(i=>'<div class="item"><div><b>'+esc(i.nome)+'</b><small>'+money(i.preco)+' cada</small><div class="qty"><button onclick="change('+i.id+',-1)">−</button><b>'+i.q+'</b><button onclick="change('+i.id+',1)">+</button></div></div><b>'+money(i.preco*i.q)+'</b></div>').join(""):'<div class="empty">Seu carrinho está vazio.</div>'}
-function openCart(){$("drawer").classList.add("show")}function closeCart(){$("drawer").classList.remove("show")}
-function checkout(){if(!cart.length)return alert("Adicione produtos ao carrinho.");closeCart();step=1;renderForm();$("modal").style.display="flex"}
-function closeCheckout(){$("modal").style.display="none"}
-function renderForm(){let t=totals();if(step===1)$("form").innerHTML='<div class="form"><div class="field"><label>Nome *</label><input id="nome" placeholder="Seu nome"></div><div class="field"><label>Telefone *</label><input id="tel" inputmode="tel" placeholder="(85) 99999-9999"></div><div class="field"><label>Recebimento</label><select id="tipo" onchange="toggle()"><option>Entrega</option><option>Retirada</option></select></div><div id="addr"><div class="field"><label>Endereço *</label><input id="end" placeholder="Rua, número, bairro"></div><div class="field"><label>Complemento</label><input id="comp" placeholder="Apto, referência..."></div></div><div class="actions"><button class="back" onclick="closeCheckout()">Cancelar</button><button class="next" onclick="next()">Continuar →</button></div></div>';else if(step===2)$("form").innerHTML='<div class="form"><div class="field"><label>Pagamento</label><select id="pag"><option>Pix</option><option>Dinheiro</option><option>Cartão</option></select></div><div class="field"><label>Observação</label><textarea id="obs" placeholder="Troco, retirar ingrediente..."></textarea></div><div class="review">'+cart.map(i=>i.q+"x "+esc(i.nome)+" — "+money(i.preco*i.q)).join("<br>")+"<hr><b>Total: "+money(t.total)+"</b></div><div class="actions"><button class="back" onclick="step=1;renderForm()">← Voltar</button><button class="next" onclick="next()">Revisar →</button></div></div>';else{$("form").innerHTML='<div class="form"><div class="review"><b>Confira seu pedido</b><br><br>'+cart.map(i=>i.q+"x "+esc(i.nome)+" — "+money(i.preco*i.q)).join("<br>")+"<hr><b>Total: "+money(t.total)+"</b></div><div class="actions"><button class="back" onclick="step=2;renderForm()">← Voltar</button><button class="next" onclick="sendOrder()">✅ Enviar para WhatsApp</button></div></div>"}}
-function toggle(){$("addr").style.display=$("tipo").value==="Entrega"?"block":"none"}
-function next(){if(step===1&&(!$("nome").value.trim()||!$("tel").value.trim()||($("tipo").value==="Entrega"&&!$("end").value.trim())))return alert("Preencha os campos obrigatórios.");step++;renderForm()}
-async function sendOrder(){let nome=$("nome")?.value||"",tel=$("tel")?.value||"",tipo=$("tipo")?.value||"Entrega",end=$("end")?.value||"",comp=$("comp")?.value||"",pag=$("pag")?.value||"Pix",obs=$("obs")?.value||"",t=totals(),id="WEB-"+Date.now();let payload={cliente_nome:nome,cliente_telefone:tel,tipo_entrega:tipo,endereco:end,complemento:comp,pagamento:pag,observacao:obs,itens:cart,subtotal:t.s,taxa_entrega:t.fee,total:t.total,status:"novo"};try{let r=await sb.from(CONFIG.ORDERS_TABLE).insert(payload).select("id").single();if(!r.error&&r.data?.id)id=r.data.id;else console.warn(r.error)}catch(e){console.warn(e)}let lines=cart.map(i=>i.q+"x "+i.nome+" — "+money(i.preco*i.q)).join("\n");let addr=tipo==="Entrega"?end+(comp?", "+comp:""):"Retirada no local";let msg="*NOVO PEDIDO — SONHO DE PASTEL*\nPedido: "+id+"\nCliente: "+nome+"\nTelefone: "+tel+"\nRecebimento: "+tipo+"\nEndereço: "+addr+"\nPagamento: "+pag+"\n\n*ITENS*\n"+lines+"\n\nSubtotal: "+money(t.s)+"\nEntrega: "+money(t.fee)+"\n*TOTAL: "+money(t.total)+(obs?"\nObs.: "+obs:"");window.open("https://wa.me/"+CONFIG.WHATSAPP+"?text="+encodeURIComponent(msg),"_blank");closeCheckout()}
-if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("./sw.js?v=5").catch(console.warn));load();
-</script></body></html>
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#fffaf0;
+  color:#32160c;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+/* =========================
+   TOPO
+========================= */
+
+.top{
+  background:#571b07;
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow:0 3px 15px #0004;
+}
+
+.topin{
+  max-width:1100px;
+  margin:auto;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.brand{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  min-width:0;
+}
+
+.brand img{
+  width:58px;
+  height:58px;
+  border-radius:15px;
+  object-fit:cover;
+  flex-shrink:0;
+}
+
+.brand b{
+  font-size:20px;
+  display:block;
+}
+
+.brand small{
+  display:block;
+  color:#f5d6c6;
+  margin-top:2px;
+}
+
+.cart{
+  background:#ffbf00;
+  color:#4b1907;
+  border:0;
+  border-radius:28px;
+  padding:12px 17px;
+  font-weight:900;
+  cursor:pointer;
+  white-space:nowrap;
+  font-size:15px;
+}
+
+.count{
+  background:#702507;
+  color:#fff;
+  border-radius:50%;
+  padding:5px 10px;
+  margin-left:5px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  background:
+    linear-gradient(
+      135deg,
+      #fff0a9,
+      #fff9e8
+    );
+
+  padding:35px 16px;
+}
+
+.heroin{
+  max-width:1100px;
+  margin:auto;
+
+  display:flex;
+  gap:22px;
+  align-items:center;
+}
+
+.hero img{
+  width:115px;
+  height:115px;
+  object-fit:cover;
+  border-radius:18px;
+  flex-shrink:0;
+}
+
+.hero h1{
+  font-size:clamp(32px,6vw,52px);
+  margin:0;
+  line-height:1.05;
+}
+
+.hero p{
+  font-size:20px;
+  color:#6d594d;
+  margin:12px 0 18px;
+}
+
+.search{
+  width:100%;
+  padding:15px 20px;
+
+  border:
+    1px solid
+    #ddd0c2;
+
+  border-radius:30px;
+
+  font-size:18px;
+
+  outline:none;
+
+  background:#fff;
+}
+
+.search:focus{
+  border-color:#571b07;
+  box-shadow:0 0 0 3px #571b0720;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status{
+  max-width:1100px;
+  margin:15px auto;
+
+  padding:12px;
+
+  text-align:center;
+
+  background:#fff1d9;
+
+  border-radius:12px;
+
+  font-weight:700;
+
+  margin-left:16px;
+  margin-right:16px;
+}
+
+.status.ok{
+  background:#eaf8ef!important;
+  color:#116b35;
+}
+
+.status.err{
+  background:#fff0ef!important;
+  color:#a3241b;
+}
+
+.status.info{
+  background:#fff1d9;
+  color:#6b4c35;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main{
+  max-width:1100px;
+  margin:auto;
+
+  padding:
+    18px
+    16px
+    80px;
+}
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.cats{
+  display:flex;
+  gap:8px;
+
+  overflow-x:auto;
+
+  padding-bottom:15px;
+
+  scrollbar-width:none;
+}
+
+.cats::-webkit-scrollbar{
+  display:none;
+}
+
+.cat{
+  border:
+    1px solid
+    #eadfd0;
+
+  background:#fff;
+
+  border-radius:22px;
+
+  padding:9px 14px;
+
+  font-weight:800;
+
+  white-space:nowrap;
+
+  cursor:pointer;
+}
+
+.cat.active{
+  background:#571b07;
+  color:#fff;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:16px;
+}
+
+.card{
+  background:#fff;
+
+  border:
+    1px solid
+    #eadfd0;
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 8px 25px
+    #32160c12;
+
+  transition:
+    transform .15s,
+    box-shadow .15s;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 12px 30px
+    #32160c20;
+}
+
+.pic{
+  aspect-ratio:1.15;
+
+  background:#f5e7d4;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.pic img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+.badge{
+  position:absolute;
+
+  top:9px;
+  left:9px;
+
+  background:#ffbf00;
+
+  padding:6px 9px;
+
+  border-radius:15px;
+
+  font-size:12px;
+
+  font-weight:900;
+}
+
+.body{
+  padding:13px;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:7px;
+}
+
+.body h3{
+  margin:0;
+}
+
+.body p{
+  margin:0;
+
+  color:#74685f;
+
+  min-height:38px;
+}
+
+.price{
+  font-size:21px;
+
+  font-weight:950;
+
+  color:#571b07;
+}
+
+.add,
+.primary{
+  background:#571b07;
+  color:#fff;
+
+  border:0;
+
+  border-radius:11px;
+
+  padding:12px;
+
+  font-weight:900;
+
+  cursor:pointer;
+}
+
+.add:hover,
+.primary:hover{
+  filter:brightness(1.1);
+}
+
+.empty{
+  text-align:center;
+
+  padding:45px 15px;
+
+  color:#74685f;
+}
+
+/* =========================
+   CARRINHO
+========================= */
+
+.drawer,
+.modal{
+  position:fixed;
+
+  inset:0;
+
+  background:#0007;
+
+  z-index:100;
+
+  display:none;
+}
+
+.drawer.show{
+  display:block;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.panel{
+  position:absolute;
+
+  right:0;
+  top:0;
+
+  height:100%;
+
+  width:min(520px,100%);
+
+  background:#fffaf4;
+
+  display:flex;
+
+  flex-direction:column;
+}
+
+.head{
+  padding:15px;
+
+  border-bottom:
+    1px solid
+    #eadfd0;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+}
+
+.head h2{
+  margin:0;
+}
+
+.close{
+  border:0;
+
+  background:#eee5da;
+
+  border-radius:50%;
+
+  width:40px;
+  height:40px;
+
+  cursor:pointer;
+
+  font-size:16px;
+}
+
+.items{
+  overflow:auto;
+
+  flex:1;
+
+  padding:14px;
+}
+
+.item{
+  background:#fff;
+
+  border:
+    1px solid
+    #eadfd0;
+
+  border-radius:13px;
+
+  padding:11px;
+
+  margin-bottom:9px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:12px;
+}
+
+.item small{
+  display:block;
+
+  color:#74685f;
+
+  margin-top:3px;
+}
+
+.qty{
+  display:flex;
+
+  gap:7px;
+
+  align-items:center;
+
+  margin-top:7px;
+}
+
+.qty button{
+  border:0;
+
+  background:#eadfd0;
+
+  border-radius:7px;
+
+  width:30px;
+  height:30px;
+
+  cursor:pointer;
+
+  font-size:18px;
+}
+
+.foot{
+  padding:15px;
+
+  border-top:
+    1px solid
+    #eadfd0;
+
+  background:#fff;
+}
+
+.sum{
+  display:flex;
+
+  justify-content:space-between;
+
+  margin:6px 0;
+}
+
+.total{
+  font-size:22px;
+
+  font-weight:950;
+}
+
+.primary{
+  width:100%;
+
+  margin-top:10px;
+}
+
+/* =========================
+   CHECKOUT
+========================= */
+
+.modal{
+  align-items:flex-end;
+
+  justify-content:center;
+}
+
+.box{
+  background:#fffaf4;
+
+  width:min(680px,100%);
+
+  max-height:94vh;
+
+  overflow:auto;
+
+  border-radius:
+    22px
+    22px
+    0
+    0;
+
+  padding:17px;
+}
+
+.form{
+  display:grid;
+
+  gap:11px;
+}
+
+.field label{
+  font-size:13px;
+
+  font-weight:800;
+
+  display:block;
+
+  margin-bottom:5px;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+
+  padding:12px;
+
+  border:
+    1px solid
+    #ddd0c2;
+
+  border-radius:10px;
+
+  font-size:16px;
+
+  background:#fff;
+
+  outline:none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:#571b07;
+
+  box-shadow:
+    0 0 0 3px
+    #571b0718;
+}
+
+.field textarea{
+  min-height:75px;
+
+  resize:vertical;
+}
+
+.actions{
+  display:flex;
+
+  gap:9px;
+
+  margin-top:5px;
+}
+
+.actions button{
+  flex:1;
+
+  padding:13px;
+
+  border:0;
+
+  border-radius:11px;
+
+  font-weight:900;
+
+  cursor:pointer;
+}
+
+.next{
+  background:#138a45;
+
+  color:#fff;
+}
+
+.back{
+  background:#eadfd0;
+
+  color:#32160c;
+}
+
+.review{
+  background:#fff;
+
+  border:
+    1px solid
+    #eadfd0;
+
+  border-radius:13px;
+
+  padding:12px;
+
+  line-height:1.55;
+}
+
+.step{
+  font-size:13px;
+
+  font-weight:800;
+
+  color:#74685f;
+
+  margin-bottom:5px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:750px){
+
+  .grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .heroin{
+    gap:14px;
+  }
+
+  .hero img{
+    width:90px;
+    height:90px;
+  }
+
+  .brand b{
+    font-size:17px;
+  }
+
+  .brand small{
+    font-size:11px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .topin{
+    padding:10px;
+  }
+
+  .brand img{
+    width:50px;
+    height:50px;
+  }
+
+  .brand b{
+    font-size:15px;
+  }
+
+  .brand small{
+    font-size:10px;
+  }
+
+  .cart{
+    padding:10px 12px;
+    font-size:13px;
+  }
+
+  .grid{
+    gap:9px;
+  }
+
+  .body{
+    padding:10px;
+  }
+
+  .body h3{
+    font-size:16px;
+  }
+
+  .body p{
+    font-size:12px;
+  }
+
+  .price{
+    font-size:18px;
+  }
+
+  .hero h1{
+    font-size:31px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOPO
+===================================================== -->
+
+<header class="top">
+
+  <div class="topin">
+
+    <div class="brand">
+
+      <img
+        src="logo.png"
+        alt="Sonho de Pastel">
+
+      <div>
+
+        <b>Sonho de Pastel</b>
+
+        <small>
+          Cardápio oficial • Pedido pelo WhatsApp
+        </small>
+
+      </div>
+
+    </div>
+
+    <button
+      class="cart"
+      onclick="openCart()">
+
+      🛒 Carrinho
+
+      <span
+        class="count"
+        id="count">
+        0
+      </span>
+
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+  <div class="heroin">
+
+    <img
+      src="logo.png"
+      alt="Sonho de Pastel">
+
+    <div style="flex:1">
+
+      <h1>
+        Seu pastel favorito 😊
+      </h1>
+
+      <p>
+        Escolha seus produtos e finalize em poucos passos.
+      </p>
+
+      <input
+        id="search"
+        class="search"
+        placeholder="🔎 Buscar no cardápio..."
+        oninput="render()">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATUS
+===================================================== -->
+
+<div
+  id="status"
+  class="status">
+
+  🔄 Conectando ao Supabase...
+
+</div>
+
+
+<!-- =====================================================
+     PRODUTOS
+===================================================== -->
+
+<main class="main">
+
+  <div
+    id="cats"
+    class="cats">
+  </div>
+
+  <div
+    id="grid"
+    class="grid">
+  </div>
+
+</main>
+
+
+<!-- =====================================================
+     CARRINHO
+===================================================== -->
+
+<div
+  id="drawer"
+  class="drawer"
+  onclick="if(event.target===this)closeCart()">
+
+  <div class="panel">
+
+    <div class="head">
+
+      <h2>
+        🛒 Carrinho
+      </h2>
+
+      <button
+        class="close"
+        onclick="closeCart()">
+
+        ✕
+
+      </button>
+
+    </div>
+
+    <div
+      id="items"
+      class="items">
+    </div>
+
+    <div class="foot">
+
+      <div class="sum">
+
+        <span>
+          Subtotal
+        </span>
+
+        <b id="sub">
+          R$ 0,00
+        </b>
+
+      </div>
+
+      <div class="sum">
+
+        <span>
+          Entrega
+        </span>
+
+        <b id="fee">
+          R$ 0,00
+        </b>
+
+      </div>
+
+      <div class="sum total">
+
+        <span>
+          Total
+        </span>
+
+        <b id="tot">
+          R$ 0,00
+        </b>
+
+      </div>
+
+      <button
+        class="primary"
+        onclick="checkout()">
+
+        Continuar pedido
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     CHECKOUT
+===================================================== -->
+
+<div
+  id="modal"
+  class="modal"
+  onclick="if(event.target===this)closeCheckout()">
+
+  <div class="box">
+
+    <div
+      class="head"
+      style="padding:0 0 12px">
+
+      <div>
+
+        <h2>
+          Finalizar pedido
+        </h2>
+
+        <div
+          id="stepLabel"
+          class="step">
+        </div>
+
+      </div>
+
+      <button
+        class="close"
+        onclick="closeCheckout()">
+
+        ✕
+
+      </button>
+
+    </div>
+
+    <div
+      id="form">
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     SUPABASE
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<script>
+
+/* ==========================================================
+   SONHO DE PASTEL
+   V6 — SUPABASE CORRIGIDO
+========================================================== */
+
+const CONFIG = Object.freeze({
+
+  SUPABASE_URL:
+    "https://htkqxttctkygzxubjhjy.supabase.co",
+
+  SUPABASE_ANON_KEY:
+    "sb_publishable_PvIjt7O1XsDIr1rs4fj99w_wcpcSA7L",
+
+  TABLE:
+    "produtos",
+
+  BUCKET:
+    "produtos",
+
+  ORDERS_TABLE:
+    "pedidos",
+
+  WHATSAPP:
+    "5585994530854",
+
+  DELIVERY_FEE:
+    5
+
+});
+
+
+/* ==========================================================
+   ESTADO
+========================================================== */
+
+let sb = null;
+
+let products = [];
+
+let cart = [];
+
+let cat = "Todos";
+
+let step = 1;
+
+
+/* Dados do checkout ficam separados do HTML.
+   Assim não são perdidos entre as etapas. */
+
+let orderData = {
+
+  nome:"",
+  tel:"",
+  tipo:"Entrega",
+  end:"",
+  comp:"",
+  pag:"Pix",
+  obs:""
+
+};
+
+
+/* ==========================================================
+   UTILITÁRIOS
+========================================================== */
+
+const $ = id =>
+  document.getElementById(id);
+
+
+const money = n =>
+  Number(n || 0).toLocaleString(
+    "pt-BR",
+    {
+      style:"currency",
+      currency:"BRL"
+    }
+  );
+
+
+const esc = s =>
+  String(s ?? "").replace(
+    /[&<>"']/g,
+    m => ({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#039;"
+    }[m])
+  );
+
+
+function stat(text,type=""){
+
+  const el = $("status");
+
+  el.textContent = text;
+
+  el.className =
+    "status " +
+    type;
+
+}
+
+
+/* ==========================================================
+   IMAGENS SUPABASE STORAGE
+========================================================== */
+
+function productImg(p){
+
+  if(p.imagem_url){
+
+    return p.imagem_url;
+
+  }
+
+  if(!p.imagem){
+
+    return "logo.png";
+
+  }
+
+  if(
+    /^https?:\/\//i.test(
+      p.imagem
+    )
+  ){
+
+    return p.imagem;
+
+  }
+
+  return (
+
+    CONFIG.SUPABASE_URL +
+
+    "/storage/v1/object/public/" +
+
+    CONFIG.BUCKET +
+
+    "/" +
+
+    p.imagem
+      .split("/")
+      .map(
+        encodeURIComponent
+      )
+      .join("/")
+
+  );
+
+}
+
+
+/* ==========================================================
+   CONEXÃO SUPABASE
+========================================================== */
+
+async function connectSupabase(){
+
+  if(!window.supabase){
+
+    throw new Error(
+      "A biblioteca do Supabase não carregou. Verifique sua conexão com a internet."
+    );
+
+  }
+
+
+  sb =
+    window.supabase.createClient(
+
+      CONFIG.SUPABASE_URL,
+
+      CONFIG.SUPABASE_ANON_KEY,
+
+      {
+
+        auth:{
+
+          persistSession:false,
+
+          autoRefreshToken:false,
+
+          detectSessionInUrl:false
+
+        }
+
+      }
+
+    );
+
+
+  /*
+    TESTE REAL VIA REST API
+
+    Isso confirma:
+
+    URL
+    chave
+    tabela
+    RLS
+    conexão
+  */
+
+  const url =
+
+    CONFIG.SUPABASE_URL +
+
+    "/rest/v1/" +
+
+    CONFIG.TABLE +
+
+    "?select=*&ativo=eq.true&order=ordem.asc";
+
+
+  console.log(
+    "Consultando Supabase:",
+    url
+  );
+
+
+  const response =
+
+    await fetch(
+      url,
+      {
+        method:"GET",
+
+        headers:{
+
+          "apikey":
+            CONFIG.SUPABASE_ANON_KEY,
+
+          "Authorization":
+            "Bearer " +
+            CONFIG.SUPABASE_ANON_KEY,
+
+          "Accept":
+            "application/json"
+
+        },
+
+        cache:"no-store"
+
+      }
+    );
+
+
+  const texto =
+    await response.text();
+
+
+  let data;
+
+
+  try{
+
+    data =
+      JSON.parse(texto);
+
+  }catch{
+
+    throw new Error(
+      "Resposta inválida do Supabase: " +
+      texto
+    );
+
+  }
+
+
+  if(!response.ok){
+
+    const mensagem =
+
+      data?.message ||
+
+      data?.error ||
+
+      data?.hint ||
+
+      texto ||
+
+      (
+        "HTTP " +
+        response.status
+      );
+
+
+    throw new Error(
+
+      "HTTP " +
+      response.status +
+      " — " +
+      mensagem
+
+    );
+
+  }
+
+
+  if(!Array.isArray(data)){
+
+    throw new Error(
+      "O Supabase não retornou uma lista de produtos."
+    );
+
+  }
+
+
+  return data;
+
+}
+
+
+/* ==========================================================
+   CARREGAR PRODUTOS
+========================================================== */
+
+async function load(){
+
+  try{
+
+    stat(
+      "🔄 Conectando ao Supabase...",
+      "info"
+    );
+
+
+    const data =
+      await connectSupabase();
+
+
+    products =
+      data.map(
+        p => ({
+
+          ...p,
+
+          preco:
+            Number(
+              p.preco || 0
+            ),
+
+          categoria:
+            p.categoria ||
+            "Outros"
+
+        })
+      );
+
+
+    console.log(
+      "Produtos carregados:",
+      products
+    );
+
+
+    if(!products.length){
+
+      stat(
+        "🟡 Supabase conectado, mas nenhum produto ativo foi encontrado.",
+        "err"
+      );
+
+
+      $("grid").innerHTML = `
+
+        <div
+          class="empty"
+          style="grid-column:1/-1">
+
+          <b>
+            CONEXÃO COM SUPABASE OK
+          </b>
+
+          <br><br>
+
+          Porém a tabela
+          <b>produtos</b>
+          não possui produtos com
+          <b>ativo = true</b>.
+
+          <br><br>
+
+          Execute o SQL de cadastro dos produtos.
+
+        </div>
+
+      `;
+
+
+      cats();
+
+      update();
+
+      return;
+
+    }
+
+
+    stat(
+
+      "🟢 SUPABASE CONECTADO • " +
+      products.length +
+      " PRODUTOS",
+
+      "ok"
+
+    );
+
+
+    cats();
+
+    render();
+
+    update();
+
+
+  }catch(error){
+
+    console.error(
+      "ERRO COMPLETO SUPABASE:",
+      error
+    );
+
+
+    stat(
+
+      "❌ SUPABASE: " +
+      (
+        error.message ||
+        error
+      ),
+
+      "err"
+
+    );
+
+
+    $("grid").innerHTML = `
+
+      <div
+        class="empty"
+        style="grid-column:1/-1">
+
+        <b>
+          ❌ FALHA AO CARREGAR O CARDÁPIO
+        </b>
+
+        <br><br>
+
+        <strong>
+          Detalhes:
+        </strong>
+
+        <br><br>
+
+        ${esc(
+          error.message ||
+          error
+        )}
+
+        <br><br>
+
+        <button
+          class="primary"
+          onclick="load()">
+
+          🔄 Tentar novamente
+
+        </button>
+
+      </div>
+
+    `;
+
+  }
+
+}
+
+
+/* ==========================================================
+   CATEGORIAS
+========================================================== */
+
+function cats(){
+
+  const lista = [
+
+    "Todos",
+
+    ...new Set(
+      products.map(
+        p =>
+          p.categoria
+      )
+    )
+
+  ];
+
+
+  $("cats").innerHTML =
+
+    lista.map(
+
+      c => `
+
+        <button
+          class="cat ${
+            cat === c
+              ? "active"
+              : ""
+          }"
+          onclick='selectCat(${JSON.stringify(c)})'>
+
+          ${esc(c)}
+
+        </button>
+
+      `
+
+    ).join("");
+
+}
+
+
+function selectCat(c){
+
+  cat = c;
+
+  cats();
+
+  render();
+
+}
+
+
+/* ==========================================================
+   RENDER PRODUTOS
+========================================================== */
+
+function render(){
+
+  const input =
+    $("search");
+
+
+  const q =
+    input
+      ? input.value
+          .trim()
+          .toLowerCase()
+      : "";
+
+
+  const lista =
+    products.filter(
+
+      p =>
+
+        (
+          cat === "Todos" ||
+          p.categoria === cat
+        )
+
+        &&
+
+        (
+          !q ||
+
+          (
+            p.nome +
+            " " +
+            (p.descricao || "") +
+            " " +
+            p.categoria
+          )
+          .toLowerCase()
+          .includes(q)
+
+        )
+
+    );
+
+
+  if(!lista.length){
+
+    $("grid").innerHTML = `
+
+      <div
+        class="empty"
+        style="grid-column:1/-1">
+
+        🔎 Nenhum produto encontrado.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  $("grid").innerHTML =
+
+    lista.map(
+
+      p => `
+
+        <article class="card">
+
+          <div class="pic">
+
+            <img
+              src="${esc(productImg(p))}"
+              alt="${esc(p.nome)}"
+              loading="lazy"
+              onerror="
+                this.onerror=null;
+                this.src='logo.png';
+              ">
+
+            ${
+              p.destaque
+                ? `
+                  <span class="badge">
+                    ⭐ Destaque
+                  </span>
+                `
+                : ""
+            }
+
+          </div>
+
+          <div class="body">
+
+            <h3>
+              ${esc(p.nome)}
+            </h3>
+
+            <p>
+              ${esc(
+                p.descricao ||
+                "Delicioso e preparado com carinho."
+              )}
+            </p>
+
+            <div class="price">
+
+              ${money(p.preco)}
+
+            </div>
+
+            <button
+              class="add"
+              onclick="add(${Number(p.id)})">
+
+              + Adicionar
+
+            </button>
+
+          </div>
+
+        </article>
+
+      `
+
+    ).join("");
+
+}
+
+
+/* ==========================================================
+   CARRINHO
+========================================================== */
+
+function add(id){
+
+  const p =
+    products.find(
+      x =>
+        Number(x.id) ===
+        Number(id)
+    );
+
+
+  if(!p)return;
+
+
+  const item =
+    cart.find(
+      x =>
+        Number(x.id) ===
+        Number(id)
+    );
+
+
+  if(item){
+
+    item.q++;
+
+  }else{
+
+    cart.push({
+
+      id:p.id,
+
+      nome:p.nome,
+
+      preco:Number(
+        p.preco || 0
+      ),
+
+      q:1
+
+    });
+
+  }
+
+
+  update();
+
+}
+
+
+function change(id,d){
+
+  const item =
+    cart.find(
+      x =>
+        Number(x.id) ===
+        Number(id)
+    );
+
+
+  if(!item)return;
+
+
+  item.q += d;
+
+
+  if(item.q <= 0){
+
+    cart =
+      cart.filter(
+        x =>
+          Number(x.id) !==
+          Number(id)
+      );
+
+  }
+
+
+  update();
+
+}
+
+
+/* ==========================================================
+   TOTAIS
+========================================================== */
+
+function totals(){
+
+  const subtotal =
+
+    cart.reduce(
+
+      (total,item) =>
+
+        total +
+        (
+          item.preco *
+          item.q
+        ),
+
+      0
+
+    );
+
+
+  /*
+    Retirada não cobra entrega.
+    No carrinho inicial ainda usamos
+    a taxa padrão enquanto o cliente
+    não escolheu o tipo.
+  */
+
+  const fee =
+
+    subtotal
+      ? CONFIG.DELIVERY_FEE
+      : 0;
+
+
+  return {
+
+    s:subtotal,
+
+    fee,
+
+    total:
+      subtotal +
+      fee
+
+  };
+
+}
+
+
+/* ==========================================================
+   ATUALIZAR CARRINHO
+========================================================== */
+
+function update(){
+
+  const quantidade =
+
+    cart.reduce(
+      (total,item) =>
+        total + item.q,
+      0
+    );
+
+
+  const t =
+    totals();
+
+
+  $("count")
+    .textContent =
+    quantidade;
+
+
+  $("sub")
+    .textContent =
+    money(t.s);
+
+
+  $("fee")
+    .textContent =
+    money(t.fee);
+
+
+  $("tot")
+    .textContent =
+    money(t.total);
+
+
+  if(!cart.length){
+
+    $("items").innerHTML = `
+
+      <div class="empty">
+
+        Seu carrinho está vazio.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  $("items").innerHTML =
+
+    cart.map(
+
+      item => `
+
+        <div class="item">
+
+          <div>
+
+            <b>
+              ${esc(item.nome)}
+            </b>
+
+            <small>
+              ${money(item.preco)} cada
+            </small>
+
+            <div class="qty">
+
+              <button
+                onclick="change(${item.id},-1)">
+
+                −
+
+              </button>
+
+              <b>
+                ${item.q}
+              </b>
+
+              <button
+                onclick="change(${item.id},1)">
+
+                +
+
+              </button>
+
+            </div>
+
+          </div>
+
+          <b>
+
+            ${money(
+              item.preco *
+              item.q
+            )}
+
+          </b>
+
+        </div>
+
+      `
+
+    ).join("");
+
+}
+
+
+/* ==========================================================
+   ABRIR / FECHAR CARRINHO
+========================================================== */
+
+function openCart(){
+
+  $("drawer")
+    .classList
+    .add("show");
+
+}
+
+
+function closeCart(){
+
+  $("drawer")
+    .classList
+    .remove("show");
+
+}
+
+
+/* ==========================================================
+   CHECKOUT
+========================================================== */
+
+function checkout(){
+
+  if(!cart.length){
+
+    alert(
+      "Adicione produtos ao carrinho."
+    );
+
+    return;
+
+  }
+
+
+  closeCart();
+
+
+  step = 1;
+
+
+  /*
+    Reseta dados apenas ao iniciar
+    um novo checkout.
+  */
+
+  orderData = {
+
+    nome:"",
+    tel:"",
+    tipo:"Entrega",
+    end:"",
+    comp:"",
+    pag:"Pix",
+    obs:""
+
+  };
+
+
+  renderForm();
+
+
+  $("modal")
+    .classList
+    .add("show");
+
+}
+
+
+function closeCheckout(){
+
+  $("modal")
+    .classList
+    .remove("show");
+
+}
+
+
+/* ==========================================================
+   CHECKOUT — RENDER
+========================================================== */
+
+function renderForm(){
+
+  const t =
+    totals();
+
+
+  $("stepLabel").textContent =
+
+    step === 1
+      ? "Etapa 1 de 3 • Seus dados"
+      : step === 2
+      ? "Etapa 2 de 3 • Pagamento"
+      : "Etapa 3 de 3 • Revisão";
+
+
+  /* ======================================================
+     ETAPA 1
+  ====================================================== */
+
+  if(step === 1){
+
+    $("form").innerHTML = `
+
+      <div class="form">
+
+        <div class="field">
+
+          <label>
+            Nome *
+          </label>
+
+          <input
+            id="nome"
+            value="${esc(orderData.nome)}"
+            placeholder="Seu nome">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Telefone *
+          </label>
+
+          <input
+            id="tel"
+            value="${esc(orderData.tel)}"
+            inputmode="tel"
+            placeholder="(85) 99999-9999">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Recebimento
+          </label>
+
+          <select
+            id="tipo"
+            onchange="toggle()">
+
+            <option
+              value="Entrega"
+              ${
+                orderData.tipo ===
+                "Entrega"
+                  ? "selected"
+                  : ""
+              }>
+
+              Entrega
+
+            </option>
+
+            <option
+              value="Retirada"
+              ${
+                orderData.tipo ===
+                "Retirada"
+                  ? "selected"
+                  : ""
+              }>
+
+              Retirada
+
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div id="addr">
+
+          <div class="field">
+
+            <label>
+              Endereço *
+            </label>
+
+            <input
+              id="end"
+              value="${esc(orderData.end)}"
+              placeholder="Rua, número, bairro">
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              Complemento
+            </label>
+
+            <input
+              id="comp"
+              value="${esc(orderData.comp)}"
+              placeholder="Apto, referência...">
+
+          </div>
+
+        </div>
+
+
+        <div class="actions">
+
+          <button
+            class="back"
+            onclick="closeCheckout()">
+
+            Cancelar
+
+          </button>
+
+          <button
+            class="next"
+            onclick="next()">
+
+            Continuar →
+
+          </button>
+
+        </div>
+
+      </div>
+
+    `;
+
+
+    toggle();
+
+
+    return;
+
+  }
+
+
+  /* ======================================================
+     ETAPA 2
+  ====================================================== */
+
+  if(step === 2){
+
+    const feeAtual =
+
+      orderData.tipo ===
+      "Retirada"
+
+        ? 0
+
+        : CONFIG.DELIVERY_FEE;
+
+
+    const totalAtual =
+
+      t.s +
+      (
+        t.s
+          ? feeAtual
+          : 0
+      );
+
+
+    $("form").innerHTML = `
+
+      <div class="form">
+
+        <div class="review">
+
+          <b>
+            Cliente
+          </b>
+
+          <br>
+
+          ${esc(orderData.nome)}
+
+          <br>
+
+          ${esc(orderData.tel)}
+
+          <br>
+
+          ${esc(orderData.tipo)}
+
+          ${
+            orderData.tipo ===
+            "Entrega"
+
+              ? `
+                <br>
+                ${esc(orderData.end)}
+                ${
+                  orderData.comp
+                    ? ", " +
+                      esc(orderData.comp)
+                    : ""
+                }
+              `
+
+              : ""
+          }
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Pagamento
+          </label>
+
+          <select id="pag">
+
+            <option
+              ${
+                orderData.pag ===
+                "Pix"
+                  ? "selected"
+                  : ""
+              }>
+
+              Pix
+
+            </option>
+
+            <option
+              ${
+                orderData.pag ===
+                "Dinheiro"
+                  ? "selected"
+                  : ""
+              }>
+
+              Dinheiro
+
+            </option>
+
+            <option
+              ${
+                orderData.pag ===
+                "Cartão"
+                  ? "selected"
+                  : ""
+              }>
+
+              Cartão
+
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Observação
+          </label>
+
+          <textarea
+            id="obs"
+            placeholder="Troco, retirar ingrediente...">${esc(orderData.obs)}</textarea>
+
+        </div>
+
+
+        <div class="review">
+
+          ${
+            cart.map(
+              i =>
+                i.q +
+                "x " +
+                esc(i.nome) +
+                " — " +
+                money(
+                  i.preco *
+                  i.q
+                )
+            ).join("<br>")
+          }
+
+          <hr>
+
+          Subtotal:
+          <b>
+            ${money(t.s)}
+          </b>
+
+          <br>
+
+          Entrega:
+          <b>
+            ${money(
+              orderData.tipo ===
+              "Retirada"
+                ? 0
+                : feeAtual
+            )}
+          </b>
+
+          <hr>
+
+          <b>
+            Total:
+            ${money(totalAtual)}
+          </b>
+
+        </div>
+
+
+        <div class="actions">
+
+          <button
+            class="back"
+            onclick="
+              saveStep2();
+              step=1;
+              renderForm();
+            ">
+
+            ← Voltar
+
+          </button>
+
+
+          <button
+            class="next"
+            onclick="next()">
+
+            Revisar →
+
+          </button>
+
+        </div>
+
+      </div>
+
+    `;
+
+
+    return;
+
+  }
+
+
+  /* ======================================================
+     ETAPA 3
+  ====================================================== */
+
+  const feeAtual =
+
+    orderData.tipo ===
+    "Retirada"
+
+      ? 0
+      : CONFIG.DELIVERY_FEE;
+
+
+  const totalAtual =
+
+    t.s +
+    (
+      t.s
+        ? feeAtual
+        : 0
+    );
+
+
+  $("form").innerHTML = `
+
+    <div class="form">
+
+      <div class="review">
+
+        <b>
+          Confira seu pedido
+        </b>
+
+        <br><br>
+
+
+        <b>
+          Cliente:
+        </b>
+
+        ${esc(orderData.nome)}
+
+        <br>
+
+
+        <b>
+          Telefone:
+        </b>
+
+        ${esc(orderData.tel)}
+
+        <br>
+
+
+        <b>
+          Recebimento:
+        </b>
+
+        ${esc(orderData.tipo)}
+
+        ${
+          orderData.tipo ===
+          "Entrega"
+
+            ? `
+
+              <br>
+
+              <b>
+                Endereço:
+              </b>
+
+              ${esc(orderData.end)}
+
+              ${
+                orderData.comp
+                  ? ", " +
+                    esc(orderData.comp)
+                  : ""
+              }
+
+            `
+
+            : ""
+        }
+
+
+        <br>
+
+        <b>
+          Pagamento:
+        </b>
+
+        ${esc(orderData.pag)}
+
+        ${
+          orderData.obs
+            ? `
+
+              <br>
+
+              <b>
+                Observação:
+              </b>
+
+              ${esc(orderData.obs)}
+
+            `
+            : ""
+        }
+
+      </div>
+
+
+      <div class="review">
+
+        ${
+          cart.map(
+            i =>
+              i.q +
+              "x " +
+              esc(i.nome) +
+              " — " +
+              money(
+                i.preco *
+                i.q
+              )
+          ).join("<br>")
+        }
+
+        <hr>
+
+        Subtotal:
+        <b>
+          ${money(t.s)}
+        </b>
+
+        <br>
+
+        Entrega:
+        <b>
+          ${money(feeAtual)}
+        </b>
+
+        <hr>
+
+        <b>
+          TOTAL:
+          ${money(totalAtual)}
+        </b>
+
+      </div>
+
+
+      <div class="actions">
+
+        <button
+          class="back"
+          onclick="
+            step=2;
+            renderForm();
+          ">
+
+          ← Voltar
+
+        </button>
+
+
+        <button
+          class="next"
+          id="sendButton"
+          onclick="sendOrder()">
+
+          ✅ Enviar para WhatsApp
+
+        </button>
+
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+/* ==========================================================
+   MOSTRAR / ESCONDER ENDEREÇO
+========================================================== */
+
+function toggle(){
+
+  const tipo =
+    $("tipo");
+
+
+  const addr =
+    $("addr");
+
+
+  if(!tipo || !addr)return;
+
+
+  addr.style.display =
+
+    tipo.value ===
+    "Entrega"
+
+      ? "block"
+      : "none";
+
+}
+
+
+/* ==========================================================
+   SALVAR ETAPA 1
+========================================================== */
+
+function saveStep1(){
+
+  orderData.nome =
+    $("nome")?.value.trim() ||
+    "";
+
+  orderData.tel =
+    $("tel")?.value.trim() ||
+    "";
+
+  orderData.tipo =
+    $("tipo")?.value ||
+    "Entrega";
+
+  orderData.end =
+    $("end")?.value.trim() ||
+    "";
+
+  orderData.comp =
+    $("comp")?.value.trim() ||
+    "";
+
+}
+
+
+/* ==========================================================
+   SALVAR ETAPA 2
+========================================================== */
+
+function saveStep2(){
+
+  orderData.pag =
+    $("pag")?.value ||
+    "Pix";
+
+  orderData.obs =
+    $("obs")?.value.trim() ||
+    "";
+
+}
+
+
+/* ==========================================================
+   PRÓXIMA ETAPA
+========================================================== */
+
+function next(){
+
+  if(step === 1){
+
+    saveStep1();
+
+
+    if(
+      !orderData.nome ||
+      !orderData.tel ||
+      (
+        orderData.tipo ===
+        "Entrega" &&
+        !orderData.end
+      )
+    ){
+
+      alert(
+        "Preencha os campos obrigatórios."
+      );
+
+      return;
+
+    }
+
+
+    step = 2;
+
+    renderForm();
+
+    return;
+
+  }
+
+
+  if(step === 2){
+
+    saveStep2();
+
+    step = 3;
+
+    renderForm();
+
+  }
+
+}
+
+
+/* ==========================================================
+   ENVIAR PEDIDO
+========================================================== */
+
+async function sendOrder(){
+
+  saveStep2();
+
+
+  const t =
+    totals();
+
+
+  const fee =
+
+    orderData.tipo ===
+    "Retirada"
+
+      ? 0
+      : CONFIG.DELIVERY_FEE;
+
+
+  const total =
+
+    t.s +
+    (
+      t.s
+        ? fee
+        : 0
+    );
+
+
+  const button =
+    $("sendButton");
+
+
+  if(button){
+
+    button.disabled = true;
+
+    button.textContent =
+      "⏳ Enviando pedido...";
+
+  }
+
+
+  let pedidoId =
+    "WEB-" +
+    Date.now();
+
+
+  const payload = {
+
+    cliente_nome:
+      orderData.nome,
+
+    cliente_telefone:
+      orderData.tel,
+
+    tipo_entrega:
+      orderData.tipo,
+
+    endereco:
+      orderData.end,
+
+    complemento:
+      orderData.comp,
+
+    pagamento:
+      orderData.pag,
+
+    observacao:
+      orderData.obs,
+
+    itens:
+      cart,
+
+    subtotal:
+      t.s,
+
+    taxa_entrega:
+      fee,
+
+    total:
+      total,
+
+    status:
+      "novo"
+
+  };
+
+
+  /* ======================================================
+     SALVAR NO SUPABASE
+  ====================================================== */
+
+  try{
+
+    if(!sb){
+
+      sb =
+        window.supabase.createClient(
+
+          CONFIG.SUPABASE_URL,
+
+          CONFIG.SUPABASE_ANON_KEY,
+
+          {
+            auth:{
+              persistSession:false
+            }
+          }
+
+        );
+
+    }
+
+
+    const result =
+
+      await sb
+        .from(CONFIG.ORDERS_TABLE)
+        .insert(payload)
+        .select("id")
+        .single();
+
+
+    if(result.error){
+
+      console.error(
+        "Erro ao salvar pedido:",
+        result.error
+      );
+
+      /*
+        Não bloqueia o WhatsApp.
+        O cliente ainda consegue enviar
+        o pedido para a loja.
+      */
+
+    }else if(result.data?.id){
+
+      pedidoId =
+        String(
+          result.data.id
+        );
+
+    }
+
+
+  }catch(error){
+
+    console.error(
+      "Erro Supabase pedido:",
+      error
+    );
+
+  }
+
+
+  /* ======================================================
+     WHATSAPP
+  ====================================================== */
+
+  const linhas =
+
+    cart.map(
+
+      item =>
+
+        item.q +
+        "x " +
+        item.nome +
+        " — " +
+        money(
+          item.preco *
+          item.q
+        )
+
+    ).join("\n");
+
+
+  const endereco =
+
+    orderData.tipo ===
+    "Entrega"
+
+      ? orderData.end +
+        (
+          orderData.comp
+            ? ", " +
+              orderData.comp
+            : ""
+        )
+
+      : "Retirada no local";
+
+
+  const mensagem =
+
+    "*NOVO PEDIDO — SONHO DE PASTEL*" +
+
+    "\n\n" +
+
+    "Pedido: " +
+    pedidoId +
+
+    "\n" +
+
+    "Cliente: " +
+    orderData.nome +
+
+    "\n" +
+
+    "Telefone: " +
+    orderData.tel +
+
+    "\n" +
+
+    "Recebimento: " +
+    orderData.tipo +
+
+    "\n" +
+
+    "Endereço: " +
+    endereco +
+
+    "\n" +
+
+    "Pagamento: " +
+    orderData.pag +
+
+    "\n\n" +
+
+    "*ITENS*" +
+
+    "\n" +
+
+    linhas +
+
+    "\n\n" +
+
+    "Subtotal: " +
+    money(t.s) +
+
+    "\n" +
+
+    "Entrega: " +
+    money(fee) +
+
+    "\n" +
+
+    "*TOTAL: " +
+    money(total) +
+    "*" +
+
+    (
+      orderData.obs
+        ? "\n\nObs.: " +
+          orderData.obs
+        : ""
+    );
+
+
+  const whatsappUrl =
+
+    "https://wa.me/" +
+
+    CONFIG.WHATSAPP +
+
+    "?text=" +
+
+    encodeURIComponent(
+      mensagem
+    );
+
+
+  /*
+    Abre o WhatsApp.
+  */
+
+  window.open(
+    whatsappUrl,
+    "_blank"
+  );
+
+
+  closeCheckout();
+
+
+  if(button){
+
+    button.disabled = false;
+
+    button.textContent =
+      "✅ Enviar para WhatsApp";
+
+  }
+
+}
+
+
+/* ==========================================================
+   LIMPEZA DE SERVICE WORKERS ANTIGOS
+========================================================== */
+
+/*
+  Isso ajuda a impedir que uma versão antiga
+  do site continue sendo entregue pelo navegador.
+
+  IMPORTANTE:
+  Não utilizamos um novo Service Worker nesta versão.
+*/
+
+if(
+  "serviceWorker" in navigator
+){
+
+  window.addEventListener(
+    "load",
+    async () => {
+
+      try{
+
+        const regs =
+          await navigator
+            .serviceWorker
+            .getRegistrations();
+
+
+        for(
+          const registration
+          of regs
+        ){
+
+          await registration.unregister();
+
+        }
+
+
+        console.log(
+          "Service Workers antigos removidos."
+        );
+
+
+      }catch(error){
+
+        console.warn(
+          "Não foi possível remover Service Worker:",
+          error
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+/* ==========================================================
+   ERROS JAVASCRIPT
+========================================================== */
+
+window.addEventListener(
+  "error",
+  event => {
+
+    console.error(
+      "Erro JavaScript:",
+      event.error ||
+      event.message
+    );
+
+  }
+);
+
+
+/* ==========================================================
+   INICIAR
+========================================================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    update();
+
+    load();
+
+  }
+);
+
+</script>
+
+</body>
+  </html>
